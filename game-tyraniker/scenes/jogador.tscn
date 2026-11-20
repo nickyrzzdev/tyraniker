@@ -7,7 +7,6 @@
 radius = 65.0
 
 [node name="Jogador" type="CharacterBody2D" unique_id=1521149699]
-position = Vector2(500, 500)
 motion_mode = 1
 script = ExtResource("1_uahlj")
 
@@ -16,3 +15,6 @@ texture = ExtResource("1_vwxko")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=760822222]
 shape = SubResource("CircleShape2D_3sy6q")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1771097388]
+position_smoothing_enabled = true

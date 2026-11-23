@@ -30,6 +30,7 @@
 [ext_resource type="Texture2D" uid="uid://41mbqkobsn2b" path="res://assets/tileset/HollowCreek_GasStation_Free/HollowCreek_GasStation_Free/props/fuel_pump_broken.png" id="27_8ukg1"]
 [ext_resource type="PackedScene" uid="uid://byv8gesx4ep06" path="res://scenes/item.tscn" id="29_j36sj"]
 [ext_resource type="Script" uid="uid://cm8laj2y3na70" path="res://scripts/spawner_dos_itens.gd" id="29_sbghg"]
+[ext_resource type="PackedScene" uid="uid://0nssj05ighi7" path="res://scenes/hud.tscn" id="31_8lbhi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nrd35"]
 texture = ExtResource("1_u1vf7")
@@ -2661,3 +2662,5 @@ rotation = 2.5628502
 [node name="Marker2D35" type="Marker2D" parent="pontos_itens" unique_id=1975630909]
 position = Vector2(1660, 1353.0001)
 rotation = 1.5462114
+
+[node name="HUD" parent="." unique_id=870179863 instance=ExtResource("31_8lbhi")]

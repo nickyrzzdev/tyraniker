@@ -18,5 +18,5 @@ func _ao_entrar_corpo(corpo: Node2D) -> void:
 	if not corpo.is_in_group("jogador"):
 		return
 	else:
-		print(Tipo.keys()[tipo])
+		GameState.adicionar_item(tipo)
 		queue_free()

@@ -1,19 +1,25 @@
 extends Node
 
-#sinais pra cada item e a sanidadw
+#sinais pra cada item e a sanidadw (e do timer do dia)
 signal madeira_mudou(valor: int)
 signal sal_mudou(valor: int)
 signal machado_obtido
 signal sanidade_mudou(valor: int)
+signal noite_comecou
 
 #a sanidade do prota vai de 0 a 100
 const SANIDADE_MAX := 100
 
-#inicializacao dos items e da sanidade que comeca em 100
+#inicializacao dos items e da sanidade que comeca em 100 (e do signal da noite)
 var madeira := 0
 var sal := 0
 var tem_machado := false
 var sanidade := SANIDADE_MAX
+var eh_noite := false
+
+func comecar_noite() -> void:
+	eh_noite = true
+	noite_comecou.emit() #emite o sinal pra noite cmecar
 
 
 func adicionar_item(tipo: Item.Tipo) -> void:

@@ -12,13 +12,13 @@ func _ready() -> void:
 	GameState.machado_obtido.connect(_atualizar_machado)
 	GameState.sanidade_mudou.connect(_atualizar_sanidade)
 
-	#textos iniciais antes de pegar qualquer item
+	#textos iniciais antes de pegar o primeiro item
 	_atualizar_madeira(GameState.madeira)
 	_atualizar_sal(GameState.sal)
 	label_machado.text = "Machado: não"
 	_atualizar_sanidade(GameState.sanidade)
 
-
+#atualiza o vaplor no hud
 func _atualizar_madeira(valor: int) -> void:
 	label_madeira.text = "Madeira: " + str(valor)
 
@@ -26,7 +26,7 @@ func _atualizar_madeira(valor: int) -> void:
 func _atualizar_sal(valor: int) -> void:
 	label_sal.text = "Sal: " + str(valor)
 
-
+#aqui usei true/false pra saber se o player ta com machado ou n
 func _atualizar_machado() -> void:
 	label_machado.text = "Machado: sim"
 

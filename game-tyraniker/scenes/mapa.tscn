@@ -32,6 +32,8 @@
 [ext_resource type="Script" uid="uid://cm8laj2y3na70" path="res://scripts/spawner_dos_itens.gd" id="29_sbghg"]
 [ext_resource type="PackedScene" uid="uid://0nssj05ighi7" path="res://scenes/hud.tscn" id="31_8lbhi"]
 [ext_resource type="Script" uid="uid://chqtn4em7o1ys" path="res://scripts/ciclo_dia.gd" id="32_fmmpp"]
+[ext_resource type="Script" uid="uid://wwdi0ag0p4k8" path="res://scripts/barricadas.gd" id="33_8s2jq"]
+[ext_resource type="PackedScene" uid="uid://cuq6q6nbldaj8" path="res://scenes/barricadas.tscn" id="34_hyfuj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nrd35"]
 texture = ExtResource("1_u1vf7")
@@ -2670,3 +2672,15 @@ rotation = 1.5462114
 script = ExtResource("32_fmmpp")
 
 [node name="timer_dia" type="Timer" parent="ciclo_dia" unique_id=57733236]
+
+[node name="barricadas" type="Node2D" parent="." unique_id=809345903]
+script = ExtResource("33_8s2jq")
+
+[node name="barricada" parent="barricadas" unique_id=947213926 instance=ExtResource("34_hyfuj")]
+position = Vector2(556, 541)
+
+[node name="barricada2" parent="barricadas" unique_id=181373231 instance=ExtResource("34_hyfuj")]
+position = Vector2(645, 541)
+
+[node name="barricada3" parent="barricadas" unique_id=569007511 instance=ExtResource("34_hyfuj")]
+position = Vector2(602, 523)

@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cuq6q6nbldaj8"]
+
+[ext_resource type="Texture2D" uid="uid://drhagdd5k48rv" path="res://assets/tileset/HollowCreek_GasStation_Free/HollowCreek_GasStation_Free/props/bench.png" id="1_1p4ix"]
+[ext_resource type="Script" uid="uid://dcxfxuj7eq6kt" path="res://scripts/barricada.gd" id="1_ujelo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3sy6q"]
+size = Vector2(30, 14)
+
+[node name="barricada" type="StaticBody2D" unique_id=947213926]
+script = ExtResource("1_ujelo")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=978368534]
+texture = ExtResource("1_1p4ix")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1236939109]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_3sy6q")

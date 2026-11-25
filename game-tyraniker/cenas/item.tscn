@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://byv8gesx4ep06"]
+
+[ext_resource type="Script" uid="uid://d15hfv54gjxea" path="res://codigos/item.gd" id="1_rvigx"]
+[ext_resource type="Texture2D" uid="uid://cfrvvvpotbxfc" path="res://recursos/itens/item_madeira.png" id="2_alhwc"]
+[ext_resource type="Texture2D" uid="uid://ki11l7dtule4" path="res://recursos/itens/item_sal.png" id="3_2cehf"]
+[ext_resource type="Texture2D" uid="uid://csocscjyqdset" path="res://recursos/itens/item_machado.png" id="4_levnn"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3sy6q"]
+
+[node name="item" type="Area2D" unique_id=840510904]
+script = ExtResource("1_rvigx")
+texturas = Array[Texture2D]([ExtResource("2_alhwc"), ExtResource("3_2cehf"), ExtResource("4_levnn")])
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=226776191]
+texture = ExtResource("2_alhwc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2134985932]
+shape = SubResource("CircleShape2D_3sy6q")

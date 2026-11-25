@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://0nssj05ighi7"]
+
+[ext_resource type="Script" uid="uid://bipspcgo3tdxg" path="res://codigos/hud.gd" id="1_nkjil"]
+
+[sub_resource type="Theme" id="Theme_toqtt"]
+
+[node name="HUD" type="CanvasLayer" unique_id=870179863]
+script = ExtResource("1_nkjil")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=498988101]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 17.0
+offset_bottom = 92.0
+theme = SubResource("Theme_toqtt")
+
+[node name="LabelMadeira" type="Label" parent="VBoxContainer" unique_id=1730917693]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.7244898, 0, 0, 1)
+theme_override_constants/outline_size = 4
+
+[node name="LabelSal" type="Label" parent="VBoxContainer" unique_id=2025775913]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.7254902, 0, 0, 1)
+theme_override_constants/outline_size = 4
+
+[node name="LabelMachado" type="Label" parent="VBoxContainer" unique_id=1071487183]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.7254902, 0, 0, 1)
+theme_override_constants/outline_size = 4
+
+[node name="LabelSanidade" type="Label" parent="VBoxContainer" unique_id=1216811069]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.7254902, 0, 0, 1)
+theme_override_constants/outline_size = 4

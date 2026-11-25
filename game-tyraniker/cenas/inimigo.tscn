@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://isydjhot7pup"]
+
+[ext_resource type="Script" uid="uid://ikrsuk036fof" path="res://codigos/inimigo.gd" id="1_hsqkj"]
+[ext_resource type="Texture2D" uid="uid://d4jg3p2jlbgre" path="res://recursos/monstros/monsters pack/monster 5/1.png" id="1_u1rxv"]
+[ext_resource type="Texture2D" uid="uid://csnagllojkpvp" path="res://recursos/monstros/monsters pack/monster 5/2.png" id="2_hsqkj"]
+[ext_resource type="Texture2D" uid="uid://6cjcelaigqw" path="res://recursos/monstros/monsters pack/monster 5/3.png" id="3_hjbd6"]
+[ext_resource type="Texture2D" uid="uid://r33nr2k1rtfe" path="res://recursos/monstros/monsters pack/monster 5/4.png" id="4_3mbxo"]
+[ext_resource type="Texture2D" uid="uid://caatv67vftw7m" path="res://recursos/monstros/monsters pack/monster 5/5.png" id="5_3xy8t"]
+[ext_resource type="Texture2D" uid="uid://bywxd7o5tt5fa" path="res://recursos/monstros/monsters pack/monster 5/6.png" id="6_7m0xs"]
+[ext_resource type="Texture2D" uid="uid://2y70r55ooqpp" path="res://recursos/monstros/monsters pack/monster 5/7.png" id="7_hcxbj"]
+[ext_resource type="Texture2D" uid="uid://cac5qphjc5g78" path="res://recursos/monstros/monsters pack/monster 5/8.png" id="8_rt7ci"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3sy6q"]
+size = Vector2(17, 35)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3sy6q"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_u1rxv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_hsqkj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_hjbd6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_3mbxo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_3xy8t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_7m0xs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_hcxbj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_rt7ci")
+}],
+"loop": 1,
+"name": &"andar",
+"speed": 8.0
+}]
+
+[node name="inimigo" type="CharacterBody2D" unique_id=1527458784]
+script = ExtResource("1_hsqkj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1981061353]
+position = Vector2(-1.5, 0.5)
+shape = SubResource("RectangleShape2D_3sy6q")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1865492649]
+scale = Vector2(0.5, 0.552)
+sprite_frames = SubResource("SpriteFrames_3sy6q")
+animation = &"andar"
+autoplay = "andar"
+frame_progress = 0.657163

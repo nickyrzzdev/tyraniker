@@ -24,6 +24,10 @@ GameState="*uid://xkah0t30bb7x"
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
+[global_group]
+
+barricadas=""
+
 [gui]
 
 theme/custom_font="uid://8smhkm1l4b5s"

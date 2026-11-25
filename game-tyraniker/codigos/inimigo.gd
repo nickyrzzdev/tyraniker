@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 @export var velocidade := 60.0
 @export var dano := 10
-@export var distancia_ataque := 48.0
+@export var distancia_ataque := 20.0
 @export var intervalo_ataque := 1.0
 
 var alvo: Node2D = null

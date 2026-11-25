@@ -1,6 +1,6 @@
 extends Area2D
 
-@onready var teto = get_node("../teto")  # ajuste o caminho para onde o teto está
+@onready var teto = get_node("../teto")
 
 
 func _ready() -> void:

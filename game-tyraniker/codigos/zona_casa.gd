@@ -1,7 +1,6 @@
 extends Area2D
 
-@onready var teto = get_node("../teto")
-
+@onready var teto = get_node("../teto") #puxa o node do teto
 
 func _ready() -> void:
 	body_entered.connect(_ao_entrar_corpo)

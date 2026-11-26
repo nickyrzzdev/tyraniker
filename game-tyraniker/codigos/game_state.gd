@@ -34,7 +34,13 @@ func adicionar_item(tipo: Item.Tipo) -> void:
 		Item.Tipo.machado:
 			tem_machado = true
 			machado_obtido.emit()
-
+	
+func gastar_madeira(quantidade: int) -> bool: #usa pra consertar a barricada
+	if madeira < quantidade:
+		return false
+	madeira -= quantidade
+	madeira_mudou.emit(madeira)
+	return true
 
 func alterar_sanidade(valor: int) -> void:
 	# clampi impede que passe de 100 ou fique abaixo dw 0

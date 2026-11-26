@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 #script feito cm ajuda da documentacao e forum sobre ia basic ade inimigo
 
-@export var velocidade := 60.0
+@export var velocidade := 30.0
 @export var dano := 10
 @export var distancia_ataque := 20.0
 @export var intervalo_ataque := 1.0

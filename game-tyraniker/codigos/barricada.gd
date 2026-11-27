@@ -6,6 +6,14 @@ signal destruida
 var vida := 0
 @export var conserto:= 10
 var jogador_perto := false
+@export var duracao_sal := 15.0
+var tempo_sal := 0.0
+
+func _physics_process(delta: float) -> void:
+	if tempo_sal > 0.0:
+		tempo_sal -= delta
+		if tempo_sal <= 0.0:
+			$sprite_sal.visible = false
 
 #qtd de vida que a barricada vai ter
 func _ready() -> void:
@@ -26,6 +34,16 @@ func receber_dano(valor: int) -> void:
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("consertar") and jogador_perto:
 		consertar()
+	if event.is_action_pressed("salgar") and jogador_perto:
+		salgar()
+		
+func salgar() -> void:
+	if tempo_sal > 0.0: #se ela ja ta salgada o sal n eh gasto dnv eh a mesma ideia da vida cheia ds barricada no consertar
+		return
+	if not GameState.gastar_sal(1): #primeiro confere se ja ta salgada depois gasta o sal assim o jogador n perde sal atoa
+		return
+	tempo_sal = duracao_sal
+	$sprite_sal.visible = true #a barricada aparece com o sal por cima
 
 func consertar() -> void:
 	if vida >= vida_maxima: #se a barricada tiber cpm vida cheia nao deixa o jogador consertar

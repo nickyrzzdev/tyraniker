@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://drhagdd5k48rv"
-path="res://.godot/imported/bench.png-e031ebe7c715bfc91bf41e354f8b945b.ctex"
+uid="uid://c27ayioblud4y"
+path="res://.godot/imported/barricada_sal.png-0330bfd7a0b103a6f6402331548aecff.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://recursos/tileset/HollowCreek_GasStation_Free/HollowCreek_GasStation_Free/props/bench.png"
-dest_files=["res://.godot/imported/bench.png-e031ebe7c715bfc91bf41e354f8b945b.ctex"]
+source_file="res://recursos/tileset/barricada/barricada_sal.png"
+dest_files=["res://.godot/imported/barricada_sal.png-0330bfd7a0b103a6f6402331548aecff.ctex"]
 
 [params]
 

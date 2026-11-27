@@ -6,6 +6,13 @@ extends CharacterBody2D
 @export var dano := 10
 @export var distancia_ataque := 20.0
 @export var intervalo_ataque := 1.0
+@export var vida := 30
+
+func receber_dano(valor: int) -> void:
+	vida -= valor
+	if vida <= 0:
+		queue_free() #a criatura morre
+		return
 
 var alvo: Node2D = null
 var tempo_ataque := 0.0

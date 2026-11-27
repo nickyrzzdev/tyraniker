@@ -6887,5 +6887,9 @@ shape = SubResource("RectangleShape2D_38how")
 position = Vector2(1012.25, 889.5)
 shape = SubResource("RectangleShape2D_w11f4")
 
-[node name="inimigo" parent="." unique_id=1527458784 instance=ExtResource("42_mqrtn")]
+[node name="inimigo" parent="." unique_id=1527458784 groups=["inimigos"] instance=ExtResource("42_mqrtn")]
 position = Vector2(972, 1121)
+
+[node name="item" parent="." unique_id=840510904 instance=ExtResource("29_j36sj")]
+position = Vector2(832, 1034)
+tipo = 2

@@ -18,7 +18,7 @@ var alvo: Node2D = null
 var tempo_ataque := 0.0
 
 func _physics_process(delta: float) -> void:
-	if not is_instance_valid(alvo):
+	if not is_instance_valid(alvo) or alvo.tempo_sal > 0.0:
 		alvo = escolher_alvo()
 	if alvo == null:
 		return
@@ -38,6 +38,8 @@ func escolher_alvo() -> Node2D:
 	var mais_proxima: Node2D = null
 	var menor_distancia := INF
 	for barricada in get_tree().get_nodes_in_group("barricadas"):
+		if barricada.tempo_sal > 0.0:
+			continue #pula a barricada salgada e passa pro proxiomo alvo da lista	
 		var distancia = global_position.distance_to(barricada.global_position)
 		if distancia < menor_distancia:
 			menor_distancia = distancia

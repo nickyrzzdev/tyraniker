@@ -46,3 +46,11 @@ func alterar_sanidade(valor: int) -> void:
 	# clampi impede que passe de 100 ou fique abaixo dw 0
 	sanidade = clampi(sanidade + valor, 0, SANIDADE_MAX)
 	sanidade_mudou.emit(sanidade)
+	
+
+func gastar_sal(quantidade: int) -> bool:
+	if sal < quantidade:
+		return false
+	sal -= quantidade
+	sal_mudou.emit(sal)
+	return true

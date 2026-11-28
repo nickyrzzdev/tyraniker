@@ -1,6 +1,6 @@
 extends CanvasModulate
 
-@export var duracao_dia := 180
+@export var duracao_dia := 15
 @export var cor_noite := Color(0.2, 0.2, 0.3)
 @onready var timer_dia: Timer = $timer_dia
 

@@ -12,32 +12,27 @@ var atacando := false
 func _ready() -> void:
 	sprite.animation_finished.connect(_on_animacao_terminou)
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
+	if Input.is_action_just_pressed("atacar") and GameState.tem_machado and not atacando:
+		atacando = true
+		sprite.play("ataque_" + ultima_direcao)
+		print("ataque: ", $area_ataque.get_overlapping_bodies())  # TEMPORÁRIO
+		for corpo in $area_ataque.get_overlapping_bodies():
+			if corpo.is_in_group("inimigo"):
+				corpo.receber_dano(dano_machado)
+
+	if atacando:
+		velocity = Vector2.ZERO
+		move_and_slide()
+		return
+
 	var direcao := Input.get_vector("esquerda", "direita", "pra cima", "pra baixo")
 	if Input.is_action_pressed("correr"):
 		velocity = corrida * direcao
 	else:
 		velocity = velocidade * direcao
 	move_and_slide()
-	
-	tempo_ataque -= delta
-	if Input.is_action_just_pressed("atacar") and GameState.tem_machado and tempo_ataque <= 0.0: #exige machado e tempp de ataque menorou igual a 0
-		atacando = true
-		sprite.play("ataque_" + ultima_direcao)
-		for corpo in $area_ataque.get_overlapping_bodies():
-			if corpo.is_in_group("inimigos"):
-				corpo.receber_dano(dano_machado)
-	
-	
-	if atacando:
-		velocity = Vector2.ZERO
-		move_and_slide()
-		return
-		tempo_ataque = intervalo_ataque
-		for corpo in $area_ataque.get_overlapping_bodies(): #devolve os corpos que tao dentro da area no momento
-			if corpo.is_in_group("inimigos"): #garante que o machado so bate nas criatura e n por exemplo a parede
-				corpo.receber_dano(dano_machado) #da dano na criatura
-	
+
 	if direcao == Vector2.ZERO:
 		sprite.play("parado_" + ultima_direcao) #toca a animacao de idle na direcaop que o player estiber
 		return
@@ -57,5 +52,8 @@ func _physics_process(delta: float) -> void:
 	
 	sprite.play("andando_"+ ultima_direcao)
 	
+
+func receber_dano(valor: int) -> void:
+	GameState.alterar_sanidade(-valor) #perde sanidadeao recber dano
 func _on_animacao_terminou() -> void:
 	atacando = false

@@ -9,6 +9,33 @@
 [ext_resource type="Texture2D" uid="uid://bywxd7o5tt5fa" path="res://recursos/monstros/monsters pack/monster 5/6.png" id="6_7m0xs"]
 [ext_resource type="Texture2D" uid="uid://2y70r55ooqpp" path="res://recursos/monstros/monsters pack/monster 5/7.png" id="7_hcxbj"]
 [ext_resource type="Texture2D" uid="uid://cac5qphjc5g78" path="res://recursos/monstros/monsters pack/monster 5/8.png" id="8_rt7ci"]
+[ext_resource type="Texture2D" uid="uid://bp3o6u26ncetx" path="res://recursos/monstros/monsters pack/monster 4/1.png" id="10_fr1lv"]
+[ext_resource type="Texture2D" uid="uid://dbvh16kdtxba2" path="res://recursos/monstros/monsters pack/monster 4/2.png" id="11_7yxif"]
+[ext_resource type="Texture2D" uid="uid://dxicfqf4ojfop" path="res://recursos/monstros/monsters pack/monster 4/3.png" id="12_ivttn"]
+[ext_resource type="Texture2D" uid="uid://700ys1tpo3g6" path="res://recursos/monstros/monsters pack/monster 4/4.png" id="13_ovcfy"]
+[ext_resource type="Texture2D" uid="uid://5mvetdgrdnxx" path="res://recursos/monstros/monsters pack/monster 4/5.png" id="14_vd2a5"]
+[ext_resource type="Texture2D" uid="uid://4ldecip7meef" path="res://recursos/monstros/monsters pack/monster 4/6.png" id="15_r5hyf"]
+[ext_resource type="Texture2D" uid="uid://d1gpb7ylr5owm" path="res://recursos/monstros/monsters pack/monster 4/7.png" id="16_15r5b"]
+[ext_resource type="Texture2D" uid="uid://b8mnjo4v100u4" path="res://recursos/monstros/monsters pack/monster 4/8.png" id="17_y4abf"]
+[ext_resource type="Texture2D" uid="uid://rvxctjqo4sp7" path="res://recursos/monstros/monsters pack/monster 6/1.png" id="18_5cmtl"]
+[ext_resource type="Texture2D" uid="uid://cq4qwfxt7g5q3" path="res://recursos/monstros/monsters pack/monster 6/2.png" id="19_denti"]
+[ext_resource type="Texture2D" uid="uid://bl8xnm2bpcrt7" path="res://recursos/monstros/monsters pack/monster 6/3.png" id="20_knjyc"]
+[ext_resource type="Texture2D" uid="uid://cl4xx6u8fxp1l" path="res://recursos/monstros/monsters pack/monster 6/4.png" id="21_5ja5o"]
+[ext_resource type="Texture2D" uid="uid://dv55xhr17pi30" path="res://recursos/monstros/monsters pack/monster 6/5.png" id="22_hh3aa"]
+[ext_resource type="Texture2D" uid="uid://cfx8aqo3681x7" path="res://recursos/monstros/monsters pack/monster 6/6.png" id="23_uivg6"]
+[ext_resource type="Texture2D" uid="uid://dcksh2k8e6gi0" path="res://recursos/monstros/monsters pack/monster 6/7.png" id="24_0fhka"]
+[ext_resource type="Texture2D" uid="uid://kocqh8vgakxq" path="res://recursos/monstros/monsters pack/monster 6/8.png" id="25_xnarm"]
+[ext_resource type="Texture2D" uid="uid://dd2rw8vu23b7f" path="res://recursos/monstros/monsters pack/monster 8/1.png" id="26_nta8b"]
+[ext_resource type="Texture2D" uid="uid://dlcp8f0ohisc" path="res://recursos/monstros/monsters pack/monster 8/2.png" id="27_cq5ys"]
+[ext_resource type="Texture2D" uid="uid://doro3jvh6ndc8" path="res://recursos/monstros/monsters pack/monster 8/3.png" id="28_va00t"]
+[ext_resource type="Texture2D" uid="uid://bjwcqdypyb1g2" path="res://recursos/monstros/monsters pack/monster 11/1.png" id="29_wt3xl"]
+[ext_resource type="Texture2D" uid="uid://dbngq8ra5sgjj" path="res://recursos/monstros/monsters pack/monster 11/2.png" id="30_nfvdx"]
+[ext_resource type="Texture2D" uid="uid://dspnhjwe2yxi6" path="res://recursos/monstros/monsters pack/monster 11/3.png" id="31_cdctq"]
+[ext_resource type="Texture2D" uid="uid://dhpnl7x8oommc" path="res://recursos/monstros/monsters pack/monster 11/4.png" id="32_oat0u"]
+[ext_resource type="Texture2D" uid="uid://b4od6wyvwh5oj" path="res://recursos/monstros/monsters pack/monster 11/5.png" id="33_qk8ft"]
+[ext_resource type="Texture2D" uid="uid://boec8bownuj2t" path="res://recursos/monstros/monsters pack/monster 11/6.png" id="34_7tf3l"]
+[ext_resource type="Texture2D" uid="uid://c2cia58mo6h8m" path="res://recursos/monstros/monsters pack/monster 11/7.png" id="35_5wwtk"]
+[ext_resource type="Texture2D" uid="uid://d20pn0qcgowob" path="res://recursos/monstros/monsters pack/monster 11/8.png" id="36_4tx4p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3sy6q"]
 size = Vector2(17, 35)
@@ -41,13 +68,115 @@ animations = [{
 "texture": ExtResource("8_rt7ci")
 }],
 "loop": 1,
-"name": &"andar",
+"name": &"monstro_1",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_fr1lv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_7yxif")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ivttn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_ovcfy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_vd2a5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_r5hyf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_15r5b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_y4abf")
+}],
+"loop": 1,
+"name": &"monstro_2",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_5cmtl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_denti")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_knjyc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_5ja5o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_hh3aa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_uivg6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_0fhka")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_xnarm")
+}],
+"loop": 1,
+"name": &"monstro_3",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("26_nta8b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_cq5ys")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_va00t")
+}],
+"loop": 1,
+"name": &"monstro_4",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("29_wt3xl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_nfvdx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_cdctq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_oat0u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_qk8ft")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_7tf3l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_5wwtk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_4tx4p")
+}],
+"loop": 1,
+"name": &"monstro_5",
 "speed": 8.0
 }]
 
 [node name="inimigo" type="CharacterBody2D" unique_id=1527458784 groups=["inimigo"]]
 collision_layer = 8
-collision_mask = 0
+collision_mask = 3
+motion_mode = 1
 script = ExtResource("1_hsqkj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1981061353]
@@ -57,6 +186,6 @@ shape = SubResource("RectangleShape2D_3sy6q")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1865492649]
 scale = Vector2(0.5, 0.552)
 sprite_frames = SubResource("SpriteFrames_3sy6q")
-animation = &"andar"
-autoplay = "andar"
-frame_progress = 0.657163
+animation = &"monstro_1"
+autoplay = "monstro_1"
+frame_progress = 0.2551713
